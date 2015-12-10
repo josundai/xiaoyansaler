@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">小燕商户端</string>
+    <string name="page_title_register">商户注册</string>
+    <string name="page_title_login">商户登陆</string>
+
+    <string name="page_test_main">调试按钮：测试主界面</string>
+    <string name="page_test_cancelRegister">调试按钮：取消注册</string>
+
+    <string name="spaces">&#032;&#032;</string>
+    <string name="shop_history">购买历史</string>
+
+    <!-- Strings related to login -->
+
+    <string name="label_account">收银员账号:</string>
+    <string name="label_authCode">授权码:</string>
+    <string name="label_password">设置密码:</string>
+    <string name="label_input_password">密码:</string>
+
+
+    <string name="prompt_email">请输入账号用户名</string>
+    <string name="prompt_authCode">请输入授权码</string>
+    <string name="prompt_password">请输入账号密码</string>
+
+    <string name="action_register_in">注册</string>
+    <string name="action_sign_in">登陆
+    </string>
+
+
+    <string name="action_sign_in_short">注册</string>
+    <string name="error_invalid_email">账户名称不合法或已经重复</string>
+    <string name="error_tooShort_email">账户名称过短</string>
+    <string name="error_invalid_password">密码过短</string>
+    <string name="error_incorrect_password">密码不正确</string>
+    <string name="error_field_required">请输入账户名称</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email    completions."   </string>
+
+    <!-- main framework-->
+    <string name="receivemoney">收款</string>
+    <string name="querydeals">交易查询</string>
+    <string name="changepassword">改密</string>
+    <string name="pingus">联系我们</string>
+
+
+
+    <string name="settings">设置</string>
+    <string name="change_pwd">修改密码</string>
+
+
+    <!---修改密码-->
+    <string name="page_title_changepassword">修改密码</string>
+    <string name="label_old_password">旧密码:</string>
+    <string name="label_new_password">新密码:</string>
+    <string name="label_new_password_again">重复新密码:</string>
+    <string name="action_old_password">请输入旧密码</string>
+    <string name="action_new_password">请输入新密码</string>
+    <string name="action_new_password_again">请重复新密码</string>
+    <string name="action_submit_change_password">重置密码</string>
+
+
+    <string name="error_invalid_old_password">请重新输入当前密码</string>
+    <string name="error_invalid_new_password">新密码格式不正确</string>
+    <string name="error_null_new_password">新密码不能为空</string>
+    <string name="error_invalid_double_password">两次输入的新密码不相同</string>
+
+
+    <!-- 联系我们-->
+    <string name="page_title_pingus">联系我们</string>
+    <string name="label_pingus_content">我们的联系方式是XXX,YYY,ZZZ</string>
+
+
+
+
+
+</resources>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg"
+    android:orientation="vertical">
+
+    <com.shangjia.views.HeaderView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <ScrollView
+        android:id="@+id/tabs_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdgeLength="0dip"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/content_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_text_general_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_set_persion"
+                android:drawableRight="@drawable/right_arrow"
+                android:gravity="center|left"
+                android:padding="10dip"
+                android:paddingLeft="30dip"
+                android:text="@string/shop_history"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/id_text_change_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_set_change_pwd"
+                android:drawableRight="@drawable/right_arrow"
+                android:gravity="center|left"
+                android:padding="10dip"
+                android:paddingLeft="30dip"
+                android:text="@string/change_pwd"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/id_text_shopping_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_set_history"
+                android:drawableRight="@drawable/right_arrow"
+                android:gravity="center|left"
+                android:padding="10dip"
+                android:paddingLeft="30dip"
+                android:text="@string/shop_history"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/id_text_points_exchange_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_set_point"
+                android:drawableRight="@drawable/right_arrow"
+                android:gravity="center|left"
+                android:padding="10dip"
+                android:paddingLeft="30dip"
+                android:text="@string/shop_history"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/id_text_ingots_exchange_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_set_ingots"
+                android:drawableRight="@drawable/right_arrow"
+                android:gravity="center|left"
+                android:padding="10dip"
+                android:paddingLeft="30dip"
+                android:text="@string/shop_history"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/id_text_app_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_set_set"
+                android:drawableRight="@drawable/right_arrow"
+                android:gravity="center|left"
+                android:padding="10dip"
+                android:paddingLeft="30dip"
+                android:text="@string/shop_history"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/id_text_check_updates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_set_update"
+                android:drawableRight="@drawable/right_arrow"
+                android:gravity="center|left"
+                android:padding="10dip"
+                android:paddingLeft="30dip"
+                android:text="@string/shop_history"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/id_text_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_set_help"
+                android:drawableRight="@drawable/right_arrow"
+                android:gravity="center|left"
+                android:padding="10dip"
+                android:paddingLeft="30dip"
+                android:text="@string/shop_history"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/id_text_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_set_about"
+                android:drawableRight="@drawable/right_arrow"
+                android:gravity="center|left"
+                android:padding="10dip"
+                android:paddingLeft="30dip"
+                android:text="@string/shop_history"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
