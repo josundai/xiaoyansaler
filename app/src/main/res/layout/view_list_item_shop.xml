@@ -19,6 +19,8 @@
             android:layout_height="@dimen/list_item_icon_height"
             android:layout_centerVertical="true"
             android:contentDescription="" />
+
+
         <!--android:background="@drawable/test_shop_icon"-->
         <RelativeLayout
             android:layout_width="fill_parent"

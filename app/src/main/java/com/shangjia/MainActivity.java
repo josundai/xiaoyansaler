@@ -21,7 +21,7 @@ public class MainActivity extends FragmentActivity {
     private LayoutInflater layoutInflater;
     private View mCustomView;
     // 定义数组来存放Fragment界面
-    private Class fragmentArray[] = {FragmentHome.class, FragmentNearby.class, ChangePasswordFragment.class, PingusFragment.class};
+    private Class fragmentArray[] = {FragmentHome.class, QueryDealListFragment.class, ChangePasswordFragment.class, PingusFragment.class};
     // 定义数组来存放按钮图片
     private int mImageViewArray[] = {R.drawable.receivemoney, R.drawable.querydeals, R.drawable.changepassword, R.drawable.pingus};
     // Tab选项卡的文字

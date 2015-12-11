@@ -68,6 +68,18 @@
     <string name="label_pingus_content">我们的联系方式是XXX,YYY,ZZZ</string>
 
 
+    <!--Test data for the Deal History-->
+    <!--Nearby-->
+    <string name="test_shop_title">卡号</string>
+    <string name="test_shop_discount">消费金额</string>
+    <string name="test_shop_address">消费时间</string>
+    <string name="test_shop_category">状态</string>
+
+    <!--Messages-->
+    <string name="load">加载中...</string>
+    <string name="load_failed">加载失败,请稍候重试!</string>
+    <string name="no_more_to_load">全部加载完毕</string>
+
 
 
 
