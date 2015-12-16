@@ -38,6 +38,7 @@ import java.util.List;
 
 import com.shangjia.model.SalerAccount;
 import com.shangjia.service.TemporyLoginService;
+import com.shangjia.views.HeaderView;
 
 /**
  * A login screen that offers login via email/password.
@@ -72,6 +73,12 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        HeaderView headerView = (HeaderView) findViewById(R.id.login_header);
+        headerView.hideRightImage();
+        headerView.setTitle(R.string.page_title_login);
+        headerView.setTitleLeft();
+
         // Set up the login form.
         mAccountView = (EditText) findViewById(R.id.account);
         mPasswordView = (EditText) findViewById(R.id.password);
@@ -86,7 +93,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = (Button) findViewById(R.id.sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
