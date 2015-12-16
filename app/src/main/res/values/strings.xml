@@ -25,6 +25,8 @@
     <string name="action_register_in">注册</string>
     <string name="action_sign_in">登录</string>
 
+    <string name="welcome_sign_in">欢迎登录</string>
+
 
     <string name="action_sign_in_short">注册</string>
     <string name="error_invalid_email">账户名称不合法或已经重复</string>
@@ -40,7 +42,13 @@
     <string name="changepassword">改密</string>
     <string name="pingus">联系我们</string>
 
-
+    <!--center menu-->
+    <string name="center_scan_code">扫码</string>
+    <string name="center_check_history">查看历史记录</string>
+    <string name="center_change_password">修改密码</string>
+    <string name="center_soft_setting">软件设置</string>
+    <string name="center_soft_update">更新</string>
+    <string name="center_about_us">关于我们</string>
 
     <string name="settings">设置</string>
     <string name="change_pwd">修改密码</string>

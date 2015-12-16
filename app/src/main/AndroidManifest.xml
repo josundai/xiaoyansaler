@@ -24,6 +24,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".HubActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".CenterActivity" />
 
 
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for

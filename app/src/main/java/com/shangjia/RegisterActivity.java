@@ -124,7 +124,7 @@ public class RegisterActivity extends Activity implements LoaderCallbacks<Cursor
         mTestButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( RegisterActivity.this, MainActivity.class);
+                Intent intent = new Intent( RegisterActivity.this, CenterActivity.class);
                 startActivity(intent);
             }
         });
