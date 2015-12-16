@@ -46,7 +46,8 @@ public class CenterActivity extends Activity {
     private void addListeners() {
         mScan.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(CenterActivity.this, "Not implemented yet!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(CenterActivity.this, ScanInputMoneyActivity.class);
+                startActivity(intent);
             }
         });
         mHistory.setOnClickListener(new View.OnClickListener() {

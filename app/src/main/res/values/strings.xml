@@ -55,6 +55,15 @@
     <string name="change_pwd">修改密码</string>
 
 
+    <!---扫码-->
+    <string name="title_scan">收款</string>
+    <string name="scan_input_money">收款金额</string>
+    <string name="scan_action_submit">扫码</string>
+    <string name="error_field_be_number">请输入正确的金额</string>
+    <string name="error_field_be_positive">金额必须大于零</string>
+
+
+
     <!---修改密码-->
     <string name="page_title_changepassword">修改密码</string>
     <string name="label_old_password">旧密码:</string>
