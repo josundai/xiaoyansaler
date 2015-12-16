@@ -1,5 +1,6 @@
 package com.shangjia.views;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.Gravity;
@@ -22,6 +23,11 @@ public class HeaderView extends LinearLayout {
         LayoutInflater.from(context).inflate(R.layout.view_header, this, true);
         mLeftBtn = (TextView)findViewById(R.id.left_btn);
         mLeftBtn.setText(" ");
+        mLeftBtn.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                ((Activity) getContext()).finish();
+            }
+        });
         mTitle = (TextView)findViewById(R.id.title);
         mRightTxt = (TextView)findViewById(R.id.id_text_help);
         mRightBtn = (ImageView)findViewById(R.id.right_btn);

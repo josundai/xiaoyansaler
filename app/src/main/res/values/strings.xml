@@ -74,6 +74,22 @@
     <!-- 联系我们-->
     <string name="page_title_pingus">联系我们</string>
     <string name="label_pingus_content">我们的联系方式是XXX,YYY,ZZZ</string>
+    <!--关于我们-->
+    <string name="aboutus_th_name">名称</string>
+    <string name="aboutus_td_name">小燕卡商户端</string>
+    <string name="aboutus_th_version">版本</string>
+    <string name="aboutus_td_version">V101.23</string>
+    <string name="aboutus_th_provider">运营商</string>
+    <string name="aboutus_td_provider">小燕卡公司</string>
+    <string name="aboutus_th_phone">联系方式</string>
+    <string name="aboutus_td_phone">0312-768123</string>
+    <string name="aboutus_th_fax">传真</string>
+    <string name="aboutus_td_fax">0312-8273699</string>
+    <string name="aboutus_th_address">地址</string>
+    <string name="aboutus_td_address">保定市新市区建设南路123号</string>
+
+
+
 
 
     <!--Test data for the Deal History-->

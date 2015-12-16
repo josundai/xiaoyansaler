@@ -1,6 +1,7 @@
 package com.shangjia;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -42,7 +43,7 @@ public class CenterActivity extends Activity {
         addListeners();
     }
 
-    private void addListeners(){
+    private void addListeners() {
         mScan.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText(CenterActivity.this, "Not implemented yet!", Toast.LENGTH_SHORT).show();
@@ -72,15 +73,16 @@ public class CenterActivity extends Activity {
                 Toast.makeText(CenterActivity.this, "Not implemented yet!", Toast.LENGTH_SHORT).show();
             }
         });
-        mAboutUs.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(CenterActivity.this, "Not implemented yet!", Toast.LENGTH_SHORT).show();
-            }
-        });
+        mAboutUs.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(CenterActivity.this, AboutUsActivity.class);
+                        startActivity(intent);
+                    }
+                });
 
     }
-
-
 
 
 }
