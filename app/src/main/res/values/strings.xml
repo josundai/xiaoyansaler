@@ -113,7 +113,8 @@
     <string name="load">加载中...</string>
     <string name="load_failed">加载失败,请稍候重试!</string>
     <string name="no_more_to_load">全部加载完毕</string>
-
+    <string name="scan">扫描二维码</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
 
 
 </resources>

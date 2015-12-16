@@ -1,6 +1,7 @@
 package com.shangjia;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.shangjia.views.HeaderView;
 
 /**
  * Created by dai on 2015/12/17.
@@ -30,6 +32,13 @@ public class ScanInputMoneyActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_inputmoney);
+
+        HeaderView headerView = (HeaderView) findViewById(R.id.header);
+        headerView.hideRightImage();
+        headerView.setTitle(R.string.receivemoney);
+        headerView.setTitleLeft();
+
+
         mMoneyNumber = (TextView) findViewById(R.id.id_input_money);
         submitButton = (Button) findViewById(R.id.id_scan_submit_button);
 
@@ -54,7 +63,9 @@ public class ScanInputMoneyActivity extends Activity {
                         mMoneyNumber.setError( errorMsg );
                         mMoneyNumber.requestFocus();
                     }else{
-                        Toast.makeText(ScanInputMoneyActivity.this, "pop scan activity!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ScanInputMoneyActivity.this, "Trigger scan activity!", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(ScanInputMoneyActivity.this, MipcaActivityCapture.class);
+                        startActivity(intent);
                     }
 
                 }
