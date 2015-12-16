@@ -54,11 +54,15 @@ public class CenterActivity extends Activity {
                 Toast.makeText(CenterActivity.this, "Not implemented yet!", Toast.LENGTH_SHORT).show();
             }
         });
-        mChangePassword.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(CenterActivity.this, "Not implemented yet!", Toast.LENGTH_SHORT).show();
-            }
-        });
+        mChangePassword.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(CenterActivity.this, ChangePasswordActivity.class);
+                        startActivity(intent);
+                    }
+
+                });
         mAppSetting.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 //                Intent intent = new Intent(getActivity(), ExchangePointHistoryActivity.class);
