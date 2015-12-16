@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">小燕商户端</string>
-    <string name="page_title_register">商户注册</string>
+
     <string name="page_title_login">商户登陆</string>
+    <string name="register_title">商户首次登录</string>
 
     <string name="page_test_main">调试按钮：测试主界面</string>
     <string name="page_test_cancelRegister">调试按钮：取消注册</string>
@@ -11,19 +12,18 @@
 
     <!-- Strings related to login -->
 
-    <string name="label_account">收银员账号:</string>
+    <string name="label_account">收银员账号</string>
     <string name="label_authCode">授权码:</string>
     <string name="label_password">设置密码:</string>
     <string name="label_input_password">密码:</string>
 
 
     <string name="prompt_email">请输入账号用户名</string>
-    <string name="prompt_authCode">请输入授权码</string>
-    <string name="prompt_password">请输入账号密码</string>
+    <string name="prompt_authCode">请填写授权码</string>
+    <string name="prompt_password">请填写密码</string>
 
     <string name="action_register_in">注册</string>
-    <string name="action_sign_in">登陆
-    </string>
+    <string name="action_sign_in">登录</string>
 
 
     <string name="action_sign_in_short">注册</string>
@@ -79,7 +79,6 @@
     <string name="load">加载中...</string>
     <string name="load_failed">加载失败,请稍候重试!</string>
     <string name="no_more_to_load">全部加载完毕</string>
-
 
 
 
