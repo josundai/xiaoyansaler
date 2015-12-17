@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:id="@+id/id_body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_snap_coupon_body_bg"
+        android:orientation="horizontal">
+
+        <com.shangjia.views.CustomizeImageView
+            android:id="@+id/id_report_thumbnail"
+            android:layout_width="@dimen/snapup_coupons_list_item_icon_width"
+            android:layout_height="@dimen/snapup_coupons_list_item_icon_height"
+            android:background="@drawable/test_snap_coupon"
+            android:contentDescription="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/snapup_coupons_list_item_icon_height"
+            android:layout_marginLeft="10dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_txt_repair_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:text="10元优惠券"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_middle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:text="兑换使用了100积分"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_smaller" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_clock"
+                android:drawablePadding="5dp"
+                android:text="兑换时间：2015年10月30日"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_smaller" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@drawable/divider_horizontal" />
+
+</LinearLayout>

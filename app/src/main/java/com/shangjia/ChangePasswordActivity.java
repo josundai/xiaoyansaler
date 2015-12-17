@@ -32,7 +32,7 @@ public class ChangePasswordActivity extends Activity {
         HeaderView headerView = (HeaderView) findViewById(R.id.header);
 //        headerView.hideRightImage();
         headerView.setTitle(R.string.center_change_password);
-        headerView.setTitleCenter();
+//        headerView.setTitleCenter();
 
         oldPassword = (TextView) findViewById(R.id.id_old_password);
         newPassword = (TextView) findViewById(R.id.id_new_password);

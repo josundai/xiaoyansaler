@@ -14,9 +14,9 @@ import android.widget.Toast;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.shangjia.actions.AbstractAction;
-import com.shangjia.actions.GetDealHistoryAction;
+import com.shangjia.actions.GetOrderHistoryAction;
 import com.shangjia.actions.ParallelTask;
-import com.shangjia.model.DealRecord;
+import com.shangjia.model.OrderRecord;
 import com.shangjia.model.Pagination;
 import com.shangjia.views.ptr.CustomizedPTRListView;
 import com.shangjia.views.ptr.PTRListAdapter;
@@ -28,10 +28,10 @@ import java.util.List;
 public class QueryDealListFragment extends Fragment  implements PullToRefreshBase.OnRefreshListener2<ListView> {
 	private final static String tag = "TT-FragNearbyShopList";
 
-	private PTRListAdapter<DealRecord> dealsListAdaptor;
-	private List<DealRecord> mShopList;
+	private PTRListAdapter<OrderRecord> dealsListAdaptor;
+	private List<OrderRecord> mShopList;
 	private boolean mShopLoadedFromServer = false;
-	private GetDealHistoryAction mGetShopAction;
+	private GetOrderHistoryAction mGetShopAction;
 
 	private View mLayout;
 	private CustomizedPTRListView mListView;
@@ -75,17 +75,17 @@ public class QueryDealListFragment extends Fragment  implements PullToRefreshBas
 	private void loadShopFromServer(){
 		mAsyncTaskCount ++;
 		Log.d(tag,  " loadShopFromServer(): tasks: " + mAsyncTaskCount);
-		mGetShopAction = new GetDealHistoryAction(getActivity(),  1, Constants.PAGE_SIZE);
+		mGetShopAction = new GetOrderHistoryAction(getActivity(),  1, Constants.PAGE_SIZE);
 		mGetShopAction.execute(
-                new AbstractAction.BackgroundCallBack<Pagination<DealRecord>>() {
-                    public void onSuccess(Pagination<DealRecord> newsPage) {
+                new AbstractAction.BackgroundCallBack<Pagination<OrderRecord>>() {
+                    public void onSuccess(Pagination<OrderRecord> newsPage) {
                     }
 
                     public void onFailure(AbstractAction.ActionError error) {
                     }
                 },
-                new AbstractAction.UICallBack<Pagination<DealRecord>>() {
-                    public void onSuccess(Pagination<DealRecord> newsList) {
+                new AbstractAction.UICallBack<Pagination<OrderRecord>>() {
+                    public void onSuccess(Pagination<OrderRecord> newsList) {
                         mShopLoadedFromServer = true;
                         if (isDetached() || getActivity() == null) //DO NOT update the view if this fragment is detached from the activity.
                             return;
@@ -114,27 +114,27 @@ public class QueryDealListFragment extends Fragment  implements PullToRefreshBas
 	private void loadShopFromDB(){
 		mAsyncTaskCount ++;
 		Log.d(tag, " loadShopFromDB(): tasks: " + mAsyncTaskCount);
-		new ParallelTask<List<DealRecord>>() {
-			protected List<DealRecord> doInBackground(Void... params) {
+		new ParallelTask<List<OrderRecord>>() {
+			protected List<OrderRecord> doInBackground(Void... params) {
                 return Collections.emptyList();
 			}
-			public void onPostExecute(List<DealRecord> shopList){
+			public void onPostExecute(List<OrderRecord> shopList){
 				//The pager is viewing another page now.
 				if(getActivity() == null)
 					return;
-                shopList = new ArrayList<DealRecord>();
-                shopList.add(new DealRecord());
-                shopList.add(new DealRecord());
-                shopList.add(new DealRecord());
-				shopList.add(new DealRecord());
-				shopList.add(new DealRecord());
-				shopList.add(new DealRecord());
-				shopList.add(new DealRecord());
-				shopList.add(new DealRecord());
+                shopList = new ArrayList<OrderRecord>();
+                shopList.add(new OrderRecord());
+                shopList.add(new OrderRecord());
+                shopList.add(new OrderRecord());
+				shopList.add(new OrderRecord());
+				shopList.add(new OrderRecord());
+				shopList.add(new OrderRecord());
+				shopList.add(new OrderRecord());
+				shopList.add(new OrderRecord());
 
 				if(dealsListAdaptor == null){
 					dealsListAdaptor = new DealRecordArrayAdapter(getActivity(), R.layout.view_list_item_shop, shopList);
-					mGetShopAction = new GetDealHistoryAction(getActivity(),  shopList.size(), Constants.PAGE_SIZE);
+					mGetShopAction = new GetOrderHistoryAction(getActivity(),  shopList.size(), Constants.PAGE_SIZE);
 					setAdapter(dealsListAdaptor);
 				}else{
 					dealsListAdaptor.clear();
@@ -154,17 +154,17 @@ public class QueryDealListFragment extends Fragment  implements PullToRefreshBas
 	public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
 		mAsyncTaskCount ++;
 		Log.d(tag, " onPullUpToRefresh(): tasks: " + mAsyncTaskCount);
-		mGetShopAction = (GetDealHistoryAction)mGetShopAction.getNextPageAction();
+		mGetShopAction = (GetOrderHistoryAction)mGetShopAction.getNextPageAction();
 		mGetShopAction.execute(
-				new AbstractAction.BackgroundCallBack<Pagination<DealRecord>>() {
-					public void onSuccess(Pagination<DealRecord> newsPage) {
+				new AbstractAction.BackgroundCallBack<Pagination<OrderRecord>>() {
+					public void onSuccess(Pagination<OrderRecord> newsPage) {
 					}
 
 					public void onFailure(AbstractAction.ActionError error) {
 					}
 				},
-				new AbstractAction.UICallBack<Pagination<DealRecord>>() {
-					public void onSuccess(Pagination<DealRecord> shopList) {
+				new AbstractAction.UICallBack<Pagination<OrderRecord>>() {
+					public void onSuccess(Pagination<OrderRecord> shopList) {
 						if (isDetached() || getActivity() == null) //DO NOT update the view if this fragment is detached from the activity.
 							return;
 						if (dealsListAdaptor == null) {
@@ -182,7 +182,7 @@ public class QueryDealListFragment extends Fragment  implements PullToRefreshBas
 
 					public void onFailure(AbstractAction.ActionError error) {
 						Toast.makeText(getActivity(), R.string.load_failed, Toast.LENGTH_SHORT).show();
-						mGetShopAction = (GetDealHistoryAction) mGetShopAction.getPreviousPageAction();
+						mGetShopAction = (GetOrderHistoryAction) mGetShopAction.getPreviousPageAction();
 						afterLoadReturned();
 					}
 				}
@@ -204,16 +204,16 @@ public class QueryDealListFragment extends Fragment  implements PullToRefreshBas
 		outState.putBoolean("mShopLoaded", mShopLoadedFromServer);
 	}
 
-	public static class DealRecordArrayAdapter extends PTRListAdapter<DealRecord> {
+	public static class DealRecordArrayAdapter extends PTRListAdapter<OrderRecord> {
         private LayoutInflater mInflater;
-        public DealRecordArrayAdapter(Context context, int res, List<DealRecord> items) {
+        public DealRecordArrayAdapter(Context context, int res, List<OrderRecord> items) {
             super(context, res, items);
             mInflater = LayoutInflater.from(context);
         }
 
 		public View getView(final int position, View convertView,
                 ViewGroup parent) {
-        	final DealRecord shop = getItem(position);
+        	final OrderRecord shop = getItem(position);
             ViewHolder holder = null;
             if (convertView == null) {
                 convertView = mInflater.inflate( R.layout.view_list_item_shop, parent, false);

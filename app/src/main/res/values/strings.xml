@@ -8,7 +8,7 @@
     <string name="page_test_cancelRegister">调试按钮：取消注册</string>
 
     <string name="spaces">&#032;&#032;</string>
-    <string name="shop_history">购买历史</string>
+    <string name="shop_history">交易历史</string>
 
     <!-- Strings related to login -->
 
@@ -79,6 +79,11 @@
     <string name="error_invalid_new_password">新密码格式不正确</string>
     <string name="error_null_new_password">新密码不能为空</string>
     <string name="error_invalid_double_password">两次输入的新密码不相同</string>
+
+    <!--交易历史-->
+    <string name="balance_recharge_amount">充值金额:</string>
+    <string name="balance_recharge_time">充值时间:</string>
+
 
 
     <!-- 联系我们-->

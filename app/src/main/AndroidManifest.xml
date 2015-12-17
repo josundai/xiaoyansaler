@@ -34,6 +34,7 @@
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".ScanInputMoneyActivity" />
         <activity android:name=".MipcaActivityCapture" />
+        <activity android:name=".OrderHistoryActivity" />
 
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->

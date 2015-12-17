@@ -19,7 +19,7 @@ public class AboutUsActivity extends Activity{
         HeaderView headerView = (HeaderView) findViewById(R.id.aboutus_header);
 //        headerView.hideRightImage();
         headerView.setTitle(R.string.center_about_us);
-        headerView.setTitleCenter();
+//        headerView.setTitleCenter();
 
     }
 }

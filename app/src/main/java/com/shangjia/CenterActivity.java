@@ -52,7 +52,8 @@ public class CenterActivity extends Activity {
         });
         mHistory.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(CenterActivity.this, "Not implemented yet!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(CenterActivity.this, OrderHistoryActivity.class);
+                startActivity(intent);
             }
         });
         mChangePassword.setOnClickListener(

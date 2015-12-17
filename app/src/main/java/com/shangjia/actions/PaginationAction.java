@@ -5,7 +5,6 @@ import android.content.Context;
 import android.util.Log;
 
 
-import com.shangjia.model.DealRecord;
 import com.shangjia.model.Pagination;
 
 import org.json.JSONArray;
