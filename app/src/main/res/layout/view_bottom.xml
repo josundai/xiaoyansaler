@@ -14,10 +14,12 @@
         android:weightSum="4">
         <TextView
             android:id="@+id/id_bottom_menu_scan"
+            android:drawableTop="@drawable/bottom_menu_scan"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="SCAN"
+            android:hint="@string/center_scan_code"
             android:background="@color/white"
+            android:gravity="center_horizontal"
             android:layout_weight="1"
             android:textSize="16dip"
             />
@@ -25,23 +27,29 @@
             android:id="@+id/id_bottom_menu_setting"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:hint="OPT"
+            android:drawableTop="@drawable/bottom_menu_setting"
+            android:hint="@string/center_soft_setting"
             android:textSize="16dip"
+            android:gravity="center_horizontal"
             android:background="@color/white"
             android:layout_height="match_parent" />
         <TextView
             android:id="@+id/id_bottom_menu_update"
+            android:drawableTop="@drawable/bottom_menu_update"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:textSize="16dip"
-            android:hint="UPDATE"
+            android:gravity="center_horizontal"
+            android:hint="@string/center_soft_update"
             android:background="@color/white"
             android:layout_height="match_parent" />
         <TextView
             android:id="@+id/id_bottom_menu_aboutus"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:hint="ABOUT"
+            android:gravity="center_horizontal"
+            android:hint="@string/center_about_us"
+            android:drawableTop="@drawable/bottom_menu_aboutus"
             android:textSize="16dip"
             android:background="@color/white"
             android:layout_height="match_parent" />
