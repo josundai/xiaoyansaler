@@ -33,7 +33,7 @@
             android:gravity="top|center_horizontal"
             android:orientation="vertical">
 
-            <EditText
+            <com.shangjia.component.MyEditText
                 android:id="@+id/id_input_money"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/input_text_height_middle"
@@ -41,6 +41,7 @@
                 android:layout_gravity="center_horizontal"
                 android:background="@color/white"
                 android:drawableLeft="@drawable/icon_register_user_name"
+                android:drawableRight="@drawable/icon_button_right_delete"
                 android:hint="@string/scan_input_money"
                 android:textSize="16sp" />
 

@@ -37,14 +37,16 @@
             android:gravity="top|center_horizontal"
             android:orientation="vertical">
 
-            <EditText
+            <com.shangjia.component.MyEditText
                 android:id="@+id/account"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/input_text_height_middle"
                 android:layout_gravity="center_horizontal"
                 android:background="@color/white"
                 android:drawableLeft="@drawable/icon_register_user_name"
+                android:drawableRight="@drawable/icon_button_right_delete"
                 android:hint="@string/label_account"
+                android:textCursorDrawable="@null"
                 android:textSize="16sp" />
 
             <View
@@ -53,13 +55,14 @@
                 android:background="@drawable/divider_horizontal" />
 
 
-            <EditText
+            <com.shangjia.component.MyEditText
                 android:id="@+id/authCode"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/input_text_height_middle"
                 android:layout_gravity="center_horizontal"
                 android:background="@color/white"
                 android:drawableLeft="@drawable/icon_register_verification_"
+                android:drawableRight="@drawable/icon_button_right_delete"
                 android:hint="@string/prompt_authCode"
                 android:textSize="16sp" />
 
@@ -68,13 +71,14 @@
                 android:layout_height="1px"
                 android:background="@drawable/divider_horizontal" />
 
-            <EditText
+            <com.shangjia.component.MyEditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/input_text_height_middle"
                 android:layout_gravity="center_horizontal"
                 android:background="@color/white"
                 android:drawableLeft="@drawable/icon_register_pwd"
+                android:drawableRight="@drawable/icon_button_right_delete"
                 android:hint="@string/prompt_password"
                 android:inputType="textPassword"
                 android:textSize="16sp" />
