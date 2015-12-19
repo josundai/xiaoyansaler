@@ -53,6 +53,18 @@
             android:layout_height="40dip"
             android:layout_gravity="center"
             android:paddingRight="15dip" />
+
+        <TextView
+            android:id="@+id/right_exit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:text="@string/page_title_exit"
+            android:textColor="@color/crimson"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
     <View

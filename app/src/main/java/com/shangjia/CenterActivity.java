@@ -31,8 +31,10 @@ public class CenterActivity extends Activity {
 
         HeaderView headerView = (HeaderView) findViewById(R.id.center_header);
         headerView.hideRightImage();
+        headerView.setTitleLeft();
         headerView.setTitle(R.string.welcome_sign_in);
-        headerView.setTitleCenter();
+        headerView.removeLeftArrow();
+        headerView.addExistButton();
 
         mScan = (TextView) findViewById(R.id.id_CenterScan);
         mHistory = (TextView) findViewById(R.id.id_CenterHistory);

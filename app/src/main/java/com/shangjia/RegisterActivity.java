@@ -92,6 +92,7 @@ public class RegisterActivity extends Activity implements LoaderCallbacks<Cursor
 
         HeaderView headerView = (HeaderView) findViewById(R.id.header);
         headerView.hideRightImage();
+        headerView.removeLeftArrow();
         headerView.setTitle(R.string.register_title);
         headerView.setTitleLeft();
 

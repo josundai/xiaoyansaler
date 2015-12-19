@@ -86,6 +86,12 @@
 
 
 
+    <string name="page_title_exit">退出  </string>
+
+    <string name="exit_dialog_confirm">您确定要退出登录吗？</string>
+    <string name="exit_dialog_yes">确定</string>
+    <string name="exit_dialog__no">取消</string>
+
     <!-- 联系我们-->
     <string name="page_title_pingus">联系我们</string>
     <string name="label_pingus_content">我们的联系方式是XXX,YYY,ZZZ</string>

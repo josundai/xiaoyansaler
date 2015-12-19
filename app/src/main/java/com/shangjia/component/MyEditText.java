@@ -98,8 +98,6 @@ public class MyEditText extends EditText {
             this.dRight = paramDrawable3;
         if( paramDrawable1 != null)
             this.dLeft = paramDrawable1;
-
-
         super.setCompoundDrawables(paramDrawable1, paramDrawable2, paramDrawable3, paramDrawable4);
     }
 }
