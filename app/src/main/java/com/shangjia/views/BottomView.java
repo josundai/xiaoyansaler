@@ -1,5 +1,6 @@
 package com.shangjia.views;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.AttributeSet;
@@ -9,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.shangjia.AboutUsActivity;
+import com.shangjia.CenterActivity;
 import com.shangjia.R;
 import com.shangjia.ScanInputMoneyActivity;
 import com.shangjia.SettingActivity;
@@ -36,26 +38,36 @@ public class BottomView extends LinearLayout {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), ScanInputMoneyActivity.class);
                 getContext().startActivity(intent);
+                cleanCurrentActivity();
             }
         });
         mSettingMenu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), SettingActivity.class);
                 getContext().startActivity(intent);
+                cleanCurrentActivity();
             }
         });
         mUpdatingMenu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), UpdateActivity.class);
                 getContext().startActivity(intent);
+                cleanCurrentActivity();
             }
         });
         mAboutUsMenu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), AboutUsActivity.class);
                 getContext().startActivity(intent);
+                cleanCurrentActivity();
             }
         });
     }
+    private void cleanCurrentActivity(){
+        if(!(((Activity) getContext()) instanceof CenterActivity)){
+            ((Activity) getContext()).finish();
+        }
+    }
+
 
 }
