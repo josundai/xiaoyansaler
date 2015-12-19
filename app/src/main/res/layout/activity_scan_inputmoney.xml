@@ -3,67 +3,63 @@
     android:layout_height="match_parent"
     android:background="@color/content_bg"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+    android:orientation="vertical">
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin">-->
 
     <com.shangjia.views.HeaderView
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <!-- Login progress -->
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="20dip"
+        android:layout_weight="1"
+        android:gravity="top|center_horizontal"
+        android:orientation="vertical">
 
-
-        <LinearLayout
+        <com.shangjia.component.MyEditText
+            android:id="@+id/id_input_money"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginBottom="10dip"
-            android:layout_marginTop="20dip"
-            android:layout_weight="1"
-            android:gravity="top|center_horizontal"
-            android:orientation="vertical">
+            android:layout_height="@dimen/input_text_height_middle"
 
-            <com.shangjia.component.MyEditText
-                android:id="@+id/id_input_money"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/input_text_height_middle"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/icon_register_user_name"
+            android:drawableRight="@drawable/icon_button_right_delete"
+            android:hint="@string/scan_input_money"
+            android:textSize="16sp" />
 
-                android:layout_gravity="center_horizontal"
-                android:background="@color/white"
-                android:drawableLeft="@drawable/icon_register_user_name"
-                android:drawableRight="@drawable/icon_button_right_delete"
-                android:hint="@string/scan_input_money"
-                android:textSize="16sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/divider_horizontal" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@drawable/divider_horizontal" />
+        <Button
+            android:id="@+id/id_scan_submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_text_height_middle"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="25dip"
+            android:background="@drawable/search_text_view_border"
+            android:onClick="onBindClick"
+            android:text="@string/scan_action_submit"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/id_scan_submit_button"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/input_text_height_middle"
-                android:layout_marginLeft="15dip"
-                android:layout_marginRight="15dip"
-                android:layout_marginTop="25dip"
-                android:background="@drawable/search_text_view_border"
-                android:onClick="onBindClick"
-                android:text="@string/scan_action_submit"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+    </LinearLayout>
 
+    <com.shangjia.views.BottomView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_gravity="center_horizontal" />
 
-
-        </LinearLayout>
 </LinearLayout>

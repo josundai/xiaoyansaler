@@ -14,5 +14,14 @@
     <com.shangjia.views.ptr.LoadingSupportPTRListView
         android:id="@+id/refresh_widget"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+         />
+
+    <com.shangjia.views.BottomView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

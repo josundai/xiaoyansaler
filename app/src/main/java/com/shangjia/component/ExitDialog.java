@@ -25,7 +25,7 @@ public class ExitDialog {
             ad.show();
             //关键在下面的两行,使用window.setContentView,替换整个对话框窗口的布局
             Window window = ad.getWindow();
-            window.setContentView(R.layout.alert_dialog);
+            window.setContentView(R.layout.exit_dialog);
             messageView=(TextView)window.findViewById(R.id.message);
             buttonLayout=(LinearLayout)window.findViewById(R.id.buttonLayout);
         }
@@ -96,6 +96,11 @@ public class ExitDialog {
             buttonLayout.addView(button);
             return this;
         }
+
+
+
+
+
         /**
          * 关闭对话框
          */
